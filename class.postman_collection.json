@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "c5359146-c95f-4e7e-b24d-4f6cbb79c32e",
+		"name": "class",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\": \"Ravi\",\r\n    \"mentor\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/students/createStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"students",
+						"createStudent"
+					]
+				},
+				"description": "[http://localhost:9000/students/getStudentsByMentorName](http://localhost:9000/students/getStudentsByMentorName)\n\nbody  \n{ \"studentName\" : \"Ravi\", \"mentor\" : **null**}"
+			},
+			"response": []
+		},
+		{
+			"name": "createMentor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mentorName\" : \"mentor2\",\r\n    \"mentees\" : null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/students/createMentor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"students",
+						"createMentor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStudentsByMentorName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"mentor1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/students/getStudentsByMentorName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"students",
+						"getStudentsByMentorName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assignStudents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mentor\" : \"mentor2\",\r\n    \"students\" : [\"Ravi\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/students/assignStudents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"students",
+						"assignStudents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllStudents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mentor\" : \"mentor2\",\r\n    \"students\" : [\"Ravi\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
